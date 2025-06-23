@@ -154,7 +154,7 @@ export default App
 
 */
 import {Routes,Route,Link} from 'react-router-dom';
-import Home from "./pages/Home.jsx";
+import Home from "./pages/home.jsx";
 import About from "./pages/About.jsx"
 import Placement from "./pages/Placement";
 function App(){
