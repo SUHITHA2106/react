@@ -1,4 +1,4 @@
-function Home(props) {
+/*function Home(props) {
   let user = props.user;
   console.log(user);
   return (
@@ -8,4 +8,13 @@ function Home(props) {
   )
 }
 
+export default Home; */
+
+
+function Home() {
+    let name = "kec"
+    return (
+        <h1>{name}home</h1>
+    )
+}
 export default Home;

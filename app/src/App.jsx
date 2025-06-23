@@ -141,7 +141,7 @@ function App(){
     </>
   )
 }
-export default App */
+export default App 
 import ListUser from "../ListUser.jsx";
 
 function App(){
@@ -150,4 +150,24 @@ function App(){
   )
 }
 
+export default App
+*/
+import {Routes,Route,Link} from 'react-router-dom';
+import Home from "./pages/Home.jsx";
+import About from "./pages/About.jsx"
+import Placement from "./pages/Placement";
+function App(){
+  return (
+    <>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/placement" element={<Placement/>} />
+
+
+
+    </Routes>
+    </>
+  );
+}
 export default App
