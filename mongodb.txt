@@ -1,0 +1,1144 @@
+use KEC
+switched to db KEC
+db.createCollection("user")
+{ ok: 1 }
+db.user.insertOne({
+name: "suhitha",
+email:"suhithamurugesh@gmail.com",
+age: "19",
+dept:"EIE",
+})
+{
+  acknowledged: true,
+  insertedId: ObjectId('685a26b2c589d64628898905')
+}
+db.user.insertMany({
+name: "veena",
+email: "veena@gmail.com",
+age: "19",
+dept: "EIE",
+})
+MongoInvalidArgumentError: Argument "docs" must be an array of documents
+db.user.insertMany({
+name: "veena",
+email: "veena@gmail.com",
+age: "19",
+dept: "EIE",
+})
+MongoInvalidArgumentError: Argument "docs" must be an array of documents
+db.user.insertMany([{
+name: "veena",
+email: "veena@gmail.com",
+age: "19",
+dept: "EIE",
+}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('685a2cdbc589d64628898906')
+  }
+}
+db.user.insertMany([{}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('685a2d45c589d64628898907')
+  }
+}
+db.user.insertMany([{
+name: "rithu",
+email: "rithu@gmail.com",
+age: "19",
+dept: "EIE",
+},{name: "abi",
+email: "abi@gamil.com",
+age:"20",
+dept:"AIDS",},
+{name:"rithish",
+email:"rithish24@gmail.com",
+age:"20",
+dept:"CSE",}, {} ])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('685a2f40c589d64628898908'),
+    '1': ObjectId('685a2f40c589d64628898909'),
+    '2': ObjectId('685a2f40c589d6462889890a'),
+    '3': ObjectId('685a2f40c589d6462889890b')
+  }
+}
+db.user.insertMany([{
+name: "rithu",
+email: "rithu@gmail.com",
+age: "19",
+dept: "EIE",
+},{name: "abi",
+email: "abi@gamil.com",
+age:"20",
+dept:"AIDS",},
+{name:"rithish",
+email:"rithish24@gmail.com",
+age:"20",
+dept:"CSE",}, {name: "dhanvanth",
+age: "15",
+dept:"mech",
+},{name:"sanjai",
+age:"20",} ])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('685a35b3c589d6462889890c'),
+    '1': ObjectId('685a35b3c589d6462889890d'),
+    '2': ObjectId('685a35b3c589d6462889890e'),
+    '3': ObjectId('685a35b3c589d6462889890f'),
+    '4': ObjectId('685a35b3c589d64628898910')
+  }
+}
+db.user.insertMany([{
+name: "rithu",
+email: "rithu@gmail.com",
+age: "19",
+dept: "EIE",
+},{name: "abi",
+email: "abi@gamil.com",
+age:"20",
+dept:"AIDS",},
+{name:"rithish",
+email:"rithish24@gmail.com",
+age:"20",
+dept:"CSE",}, {name: "dhanvanth",
+age: "15",
+dept:"mech",
+},{name:"sanjai",
+email: "sanjai@email.com",
+age:"20",
+dept:"mech",},
+ {name:"A",email:"a@gmail.com",age:"17"},
+{name:"B",email:"b@gmail.com",age:"18"},{
+name:"C",email:"c@gmail.com",age:"19"},{
+name:"D",email:"d@gmail.com",age:"20"},{
+name:"E",email:"e@gmail.com",age:"21"}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('685a3649c589d64628898911'),
+    '1': ObjectId('685a3649c589d64628898912'),
+    '2': ObjectId('685a3649c589d64628898913'),
+    '3': ObjectId('685a3649c589d64628898914'),
+    '4': ObjectId('685a3649c589d64628898915'),
+    '5': ObjectId('685a3649c589d64628898916'),
+    '6': ObjectId('685a3649c589d64628898917'),
+    '7': ObjectId('685a3649c589d64628898918'),
+    '8': ObjectId('685a3649c589d64628898919'),
+    '9': ObjectId('685a3649c589d6462889891a')
+  }
+}
+db.user.find()
+{
+  _id: ObjectId('685a26b2c589d64628898905'),
+  name: 'suhitha',
+  email: 'suhithamurugesh@gmail.com',
+  age: '19',
+  dept: 'EIE'
+}
+{
+  _id: ObjectId('685a2cdbc589d64628898906'),
+  name: 'veena',
+  email: 'veena@gmail.com',
+  age: '19',
+  dept: 'EIE'
+}
+{
+  _id: ObjectId('685a2d45c589d64628898907')
+}
+{
+  _id: ObjectId('685a2f40c589d64628898908'),
+  name: 'rithu',
+  email: 'rithu@gmail.com',
+  age: '19',
+  dept: 'EIE'
+}
+{
+  _id: ObjectId('685a2f40c589d64628898909'),
+  name: 'abi',
+  email: 'abi@gamil.com',
+  age: '20',
+  dept: 'AIDS'
+}
+{
+  _id: ObjectId('685a2f40c589d6462889890a'),
+  name: 'rithish',
+  email: 'rithish24@gmail.com',
+  age: '20',
+  dept: 'CSE'
+}
+{
+  _id: ObjectId('685a2f40c589d6462889890b')
+}
+{
+  _id: ObjectId('685a35b3c589d6462889890c'),
+  name: 'rithu',
+  email: 'rithu@gmail.com',
+  age: '19',
+  dept: 'EIE'
+}
+{
+  _id: ObjectId('685a35b3c589d6462889890d'),
+  name: 'abi',
+  email: 'abi@gamil.com',
+  age: '20',
+  dept: 'AIDS'
+}
+{
+  _id: ObjectId('685a35b3c589d6462889890e'),
+  name: 'rithish',
+  email: 'rithish24@gmail.com',
+  age: '20',
+  dept: 'CSE'
+}
+{
+  _id: ObjectId('685a35b3c589d6462889890f'),
+  name: 'dhanvanth',
+  age: '15',
+  dept: 'mech'
+}
+{
+  _id: ObjectId('685a35b3c589d64628898910'),
+  name: 'sanjai',
+  age: '20'
+}
+{
+  _id: ObjectId('685a3649c589d64628898911'),
+  name: 'rithu',
+  email: 'rithu@gmail.com',
+  age: '19',
+  dept: 'EIE'
+}
+{
+  _id: ObjectId('685a3649c589d64628898912'),
+  name: 'abi',
+  email: 'abi@gamil.com',
+  age: '20',
+  dept: 'AIDS'
+}
+{
+  _id: ObjectId('685a3649c589d64628898913'),
+  name: 'rithish',
+  email: 'rithish24@gmail.com',
+  age: '20',
+  dept: 'CSE'
+}
+{
+  _id: ObjectId('685a3649c589d64628898914'),
+  name: 'dhanvanth',
+  age: '15',
+  dept: 'mech'
+}
+{
+  _id: ObjectId('685a3649c589d64628898915'),
+  name: 'sanjai',
+  email: 'sanjai@email.com',
+  age: '20',
+  dept: 'mech'
+}
+{
+  _id: ObjectId('685a3649c589d64628898916'),
+  name: 'A',
+  email: 'a@gmail.com',
+  age: '17'
+}
+{
+  _id: ObjectId('685a3649c589d64628898917'),
+  name: 'B',
+  email: 'b@gmail.com',
+  age: '18'
+}
+{
+  _id: ObjectId('685a3649c589d64628898918'),
+  name: 'C',
+  email: 'c@gmail.com',
+  age: '19'
+}
+Type "it" for more
+db.user.findOne()
+{
+  _id: ObjectId('685a26b2c589d64628898905'),
+  name: 'suhitha',
+  email: 'suhithamurugesh@gmail.com',
+  age: '19',
+  dept: 'EIE'
+}
+db.user.find({name:"rithish"})
+{
+  _id: ObjectId('685a2f40c589d6462889890a'),
+  name: 'rithish',
+  email: 'rithish24@gmail.com',
+  age: '20',
+  dept: 'CSE'
+}
+{
+  _id: ObjectId('685a35b3c589d6462889890e'),
+  name: 'rithish',
+  email: 'rithish24@gmail.com',
+  age: '20',
+  dept: 'CSE'
+}
+{
+  _id: ObjectId('685a3649c589d64628898913'),
+  name: 'rithish',
+  email: 'rithish24@gmail.com',
+  age: '20',
+  dept: 'CSE'
+}
+db.user.find({age:"20"})
+{
+  _id: ObjectId('685a2f40c589d64628898909'),
+  name: 'abi',
+  email: 'abi@gamil.com',
+  age: '20',
+  dept: 'AIDS'
+}
+{
+  _id: ObjectId('685a2f40c589d6462889890a'),
+  name: 'rithish',
+  email: 'rithish24@gmail.com',
+  age: '20',
+  dept: 'CSE'
+}
+{
+  _id: ObjectId('685a35b3c589d6462889890d'),
+  name: 'abi',
+  email: 'abi@gamil.com',
+  age: '20',
+  dept: 'AIDS'
+}
+{
+  _id: ObjectId('685a35b3c589d6462889890e'),
+  name: 'rithish',
+  email: 'rithish24@gmail.com',
+  age: '20',
+  dept: 'CSE'
+}
+{
+  _id: ObjectId('685a35b3c589d64628898910'),
+  name: 'sanjai',
+  age: '20'
+}
+{
+  _id: ObjectId('685a3649c589d64628898912'),
+  name: 'abi',
+  email: 'abi@gamil.com',
+  age: '20',
+  dept: 'AIDS'
+}
+{
+  _id: ObjectId('685a3649c589d64628898913'),
+  name: 'rithish',
+  email: 'rithish24@gmail.com',
+  age: '20',
+  dept: 'CSE'
+}
+{
+  _id: ObjectId('685a3649c589d64628898915'),
+  name: 'sanjai',
+  email: 'sanjai@email.com',
+  age: '20',
+  dept: 'mech'
+}
+{
+  _id: ObjectId('685a3649c589d64628898919'),
+  name: 'D',
+  email: 'd@gmail.com',
+  age: '20'
+}
+db.user.updateOne({name:"rithu"},{$set:{age:25}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+db.user.findOne({name:"rithu"})
+{
+  _id: ObjectId('685a2f40c589d64628898908'),
+  name: 'rithu',
+  email: 'rithu@gmail.com',
+  age: 25,
+  dept: 'EIE'
+}
+db.user.updateOne({name:"A"},{$set:{age:45}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+db.user.updateOne({name:"B"},{$set:{age:25}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+db.user.updateOne({name:"C"},{$set:{age:20}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+db.user.updateOne({name:"D"},{$set:{age:21}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+db.user.updateMany({age:"20"},{$set:{age:"25"}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 8,
+  modifiedCount: 8,
+  upsertedCount: 0
+}
+db.user.updateOne({},{$set:{phone:" "}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+db.user.find()
+{
+  _id: ObjectId('685a26b2c589d64628898905'),
+  name: 'suhitha',
+  email: 'suhithamurugesh@gmail.com',
+  age: '19',
+  dept: 'EIE',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a2cdbc589d64628898906'),
+  name: 'veena',
+  email: 'veena@gmail.com',
+  age: '19',
+  dept: 'EIE'
+}
+{
+  _id: ObjectId('685a2d45c589d64628898907')
+}
+{
+  _id: ObjectId('685a2f40c589d64628898908'),
+  name: 'rithu',
+  email: 'rithu@gmail.com',
+  age: 25,
+  dept: 'EIE'
+}
+{
+  _id: ObjectId('685a2f40c589d64628898909'),
+  name: 'abi',
+  email: 'abi@gamil.com',
+  age: '25',
+  dept: 'AIDS'
+}
+{
+  _id: ObjectId('685a2f40c589d6462889890a'),
+  name: 'rithish',
+  email: 'rithish24@gmail.com',
+  age: '25',
+  dept: 'CSE'
+}
+{
+  _id: ObjectId('685a2f40c589d6462889890b')
+}
+{
+  _id: ObjectId('685a35b3c589d6462889890c'),
+  name: 'rithu',
+  email: 'rithu@gmail.com',
+  age: '19',
+  dept: 'EIE'
+}
+{
+  _id: ObjectId('685a35b3c589d6462889890d'),
+  name: 'abi',
+  email: 'abi@gamil.com',
+  age: '25',
+  dept: 'AIDS'
+}
+{
+  _id: ObjectId('685a35b3c589d6462889890e'),
+  name: 'rithish',
+  email: 'rithish24@gmail.com',
+  age: '25',
+  dept: 'CSE'
+}
+{
+  _id: ObjectId('685a35b3c589d6462889890f'),
+  name: 'dhanvanth',
+  age: '15',
+  dept: 'mech'
+}
+{
+  _id: ObjectId('685a35b3c589d64628898910'),
+  name: 'sanjai',
+  age: '25'
+}
+{
+  _id: ObjectId('685a3649c589d64628898911'),
+  name: 'rithu',
+  email: 'rithu@gmail.com',
+  age: '19',
+  dept: 'EIE'
+}
+{
+  _id: ObjectId('685a3649c589d64628898912'),
+  name: 'abi',
+  email: 'abi@gamil.com',
+  age: '25',
+  dept: 'AIDS'
+}
+{
+  _id: ObjectId('685a3649c589d64628898913'),
+  name: 'rithish',
+  email: 'rithish24@gmail.com',
+  age: '25',
+  dept: 'CSE'
+}
+{
+  _id: ObjectId('685a3649c589d64628898914'),
+  name: 'dhanvanth',
+  age: '15',
+  dept: 'mech'
+}
+{
+  _id: ObjectId('685a3649c589d64628898915'),
+  name: 'sanjai',
+  email: 'sanjai@email.com',
+  age: '25',
+  dept: 'mech'
+}
+{
+  _id: ObjectId('685a3649c589d64628898916'),
+  name: 'A',
+  email: 'a@gmail.com',
+  age: 45
+}
+{
+  _id: ObjectId('685a3649c589d64628898917'),
+  name: 'B',
+  email: 'b@gmail.com',
+  age: 25
+}
+{
+  _id: ObjectId('685a3649c589d64628898918'),
+  name: 'C',
+  email: 'c@gmail.com',
+  age: 20
+}
+Type "it" for more
+db.user.updateMany({},{$set:{phone:" "}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 22,
+  modifiedCount: 21,
+  upsertedCount: 0
+}
+db.user.find()
+{
+  _id: ObjectId('685a26b2c589d64628898905'),
+  name: 'suhitha',
+  email: 'suhithamurugesh@gmail.com',
+  age: '19',
+  dept: 'EIE',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a2cdbc589d64628898906'),
+  name: 'veena',
+  email: 'veena@gmail.com',
+  age: '19',
+  dept: 'EIE',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a2d45c589d64628898907'),
+  phone: ' '
+}
+{
+  _id: ObjectId('685a2f40c589d64628898908'),
+  name: 'rithu',
+  email: 'rithu@gmail.com',
+  age: 25,
+  dept: 'EIE',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a2f40c589d64628898909'),
+  name: 'abi',
+  email: 'abi@gamil.com',
+  age: '25',
+  dept: 'AIDS',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a2f40c589d6462889890a'),
+  name: 'rithish',
+  email: 'rithish24@gmail.com',
+  age: '25',
+  dept: 'CSE',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a2f40c589d6462889890b'),
+  phone: ' '
+}
+{
+  _id: ObjectId('685a35b3c589d6462889890c'),
+  name: 'rithu',
+  email: 'rithu@gmail.com',
+  age: '19',
+  dept: 'EIE',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a35b3c589d6462889890d'),
+  name: 'abi',
+  email: 'abi@gamil.com',
+  age: '25',
+  dept: 'AIDS',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a35b3c589d6462889890e'),
+  name: 'rithish',
+  email: 'rithish24@gmail.com',
+  age: '25',
+  dept: 'CSE',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a35b3c589d6462889890f'),
+  name: 'dhanvanth',
+  age: '15',
+  dept: 'mech',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a35b3c589d64628898910'),
+  name: 'sanjai',
+  age: '25',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a3649c589d64628898911'),
+  name: 'rithu',
+  email: 'rithu@gmail.com',
+  age: '19',
+  dept: 'EIE',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a3649c589d64628898912'),
+  name: 'abi',
+  email: 'abi@gamil.com',
+  age: '25',
+  dept: 'AIDS',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a3649c589d64628898913'),
+  name: 'rithish',
+  email: 'rithish24@gmail.com',
+  age: '25',
+  dept: 'CSE',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a3649c589d64628898914'),
+  name: 'dhanvanth',
+  age: '15',
+  dept: 'mech',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a3649c589d64628898915'),
+  name: 'sanjai',
+  email: 'sanjai@email.com',
+  age: '25',
+  dept: 'mech',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a3649c589d64628898916'),
+  name: 'A',
+  email: 'a@gmail.com',
+  age: 45,
+  phone: ' '
+}
+{
+  _id: ObjectId('685a3649c589d64628898917'),
+  name: 'B',
+  email: 'b@gmail.com',
+  age: 25,
+  phone: ' '
+}
+{
+  _id: ObjectId('685a3649c589d64628898918'),
+  name: 'C',
+  email: 'c@gmail.com',
+  age: 20,
+  phone: ' '
+}
+Type "it" for more
+db.user.deleteOne({name:"rithu"})
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+db.user.find()
+{
+  _id: ObjectId('685a26b2c589d64628898905'),
+  name: 'suhitha',
+  email: 'suhithamurugesh@gmail.com',
+  age: '19',
+  dept: 'EIE',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a2cdbc589d64628898906'),
+  name: 'veena',
+  email: 'veena@gmail.com',
+  age: '19',
+  dept: 'EIE',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a2d45c589d64628898907'),
+  phone: ' '
+}
+{
+  _id: ObjectId('685a2f40c589d64628898909'),
+  name: 'abi',
+  email: 'abi@gamil.com',
+  age: '25',
+  dept: 'AIDS',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a2f40c589d6462889890a'),
+  name: 'rithish',
+  email: 'rithish24@gmail.com',
+  age: '25',
+  dept: 'CSE',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a2f40c589d6462889890b'),
+  phone: ' '
+}
+{
+  _id: ObjectId('685a35b3c589d6462889890c'),
+  name: 'rithu',
+  email: 'rithu@gmail.com',
+  age: '19',
+  dept: 'EIE',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a35b3c589d6462889890d'),
+  name: 'abi',
+  email: 'abi@gamil.com',
+  age: '25',
+  dept: 'AIDS',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a35b3c589d6462889890e'),
+  name: 'rithish',
+  email: 'rithish24@gmail.com',
+  age: '25',
+  dept: 'CSE',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a35b3c589d6462889890f'),
+  name: 'dhanvanth',
+  age: '15',
+  dept: 'mech',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a35b3c589d64628898910'),
+  name: 'sanjai',
+  age: '25',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a3649c589d64628898911'),
+  name: 'rithu',
+  email: 'rithu@gmail.com',
+  age: '19',
+  dept: 'EIE',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a3649c589d64628898912'),
+  name: 'abi',
+  email: 'abi@gamil.com',
+  age: '25',
+  dept: 'AIDS',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a3649c589d64628898913'),
+  name: 'rithish',
+  email: 'rithish24@gmail.com',
+  age: '25',
+  dept: 'CSE',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a3649c589d64628898914'),
+  name: 'dhanvanth',
+  age: '15',
+  dept: 'mech',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a3649c589d64628898915'),
+  name: 'sanjai',
+  email: 'sanjai@email.com',
+  age: '25',
+  dept: 'mech',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a3649c589d64628898916'),
+  name: 'A',
+  email: 'a@gmail.com',
+  age: 45,
+  phone: ' '
+}
+{
+  _id: ObjectId('685a3649c589d64628898917'),
+  name: 'B',
+  email: 'b@gmail.com',
+  age: 25,
+  phone: ' '
+}
+{
+  _id: ObjectId('685a3649c589d64628898918'),
+  name: 'C',
+  email: 'c@gmail.com',
+  age: 20,
+  phone: ' '
+}
+{
+  _id: ObjectId('685a3649c589d64628898919'),
+  name: 'D',
+  email: 'd@gmail.com',
+  age: 21,
+  phone: ' '
+}
+Type "it" for more
+db.user.find().sort({age:20})
+MongoInvalidArgumentError: Invalid sort direction: 20
+db.user.find().sort({name:1})
+{
+  _id: ObjectId('685a2d45c589d64628898907'),
+  phone: ' '
+}
+{
+  _id: ObjectId('685a2f40c589d6462889890b'),
+  phone: ' '
+}
+{
+  _id: ObjectId('685a3649c589d64628898916'),
+  name: 'A',
+  email: 'a@gmail.com',
+  age: 45,
+  phone: ' '
+}
+{
+  _id: ObjectId('685a3649c589d64628898917'),
+  name: 'B',
+  email: 'b@gmail.com',
+  age: 25,
+  phone: ' '
+}
+{
+  _id: ObjectId('685a3649c589d64628898918'),
+  name: 'C',
+  email: 'c@gmail.com',
+  age: 20,
+  phone: ' '
+}
+{
+  _id: ObjectId('685a3649c589d64628898919'),
+  name: 'D',
+  email: 'd@gmail.com',
+  age: 21,
+  phone: ' '
+}
+{
+  _id: ObjectId('685a3649c589d6462889891a'),
+  name: 'E',
+  email: 'e@gmail.com',
+  age: '21',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a2f40c589d64628898909'),
+  name: 'abi',
+  email: 'abi@gamil.com',
+  age: '25',
+  dept: 'AIDS',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a35b3c589d6462889890d'),
+  name: 'abi',
+  email: 'abi@gamil.com',
+  age: '25',
+  dept: 'AIDS',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a3649c589d64628898912'),
+  name: 'abi',
+  email: 'abi@gamil.com',
+  age: '25',
+  dept: 'AIDS',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a35b3c589d6462889890f'),
+  name: 'dhanvanth',
+  age: '15',
+  dept: 'mech',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a3649c589d64628898914'),
+  name: 'dhanvanth',
+  age: '15',
+  dept: 'mech',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a2f40c589d6462889890a'),
+  name: 'rithish',
+  email: 'rithish24@gmail.com',
+  age: '25',
+  dept: 'CSE',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a35b3c589d6462889890e'),
+  name: 'rithish',
+  email: 'rithish24@gmail.com',
+  age: '25',
+  dept: 'CSE',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a3649c589d64628898913'),
+  name: 'rithish',
+  email: 'rithish24@gmail.com',
+  age: '25',
+  dept: 'CSE',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a35b3c589d6462889890c'),
+  name: 'rithu',
+  email: 'rithu@gmail.com',
+  age: '19',
+  dept: 'EIE',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a3649c589d64628898911'),
+  name: 'rithu',
+  email: 'rithu@gmail.com',
+  age: '19',
+  dept: 'EIE',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a35b3c589d64628898910'),
+  name: 'sanjai',
+  age: '25',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a3649c589d64628898915'),
+  name: 'sanjai',
+  email: 'sanjai@email.com',
+  age: '25',
+  dept: 'mech',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a26b2c589d64628898905'),
+  name: 'suhitha',
+  email: 'suhithamurugesh@gmail.com',
+  age: '19',
+  dept: 'EIE',
+  phone: ' '
+}
+Type "it" for more
+db.user.find().sort({age:"20"})
+MongoInvalidArgumentError: Invalid sort direction: "20"
+db.user.find().sort({age:1})
+{
+  _id: ObjectId('685a2d45c589d64628898907'),
+  phone: ' '
+}
+{
+  _id: ObjectId('685a2f40c589d6462889890b'),
+  phone: ' '
+}
+{
+  _id: ObjectId('685a3649c589d64628898918'),
+  name: 'C',
+  email: 'c@gmail.com',
+  age: 20,
+  phone: ' '
+}
+{
+  _id: ObjectId('685a3649c589d64628898919'),
+  name: 'D',
+  email: 'd@gmail.com',
+  age: 21,
+  phone: ' '
+}
+{
+  _id: ObjectId('685a3649c589d64628898917'),
+  name: 'B',
+  email: 'b@gmail.com',
+  age: 25,
+  phone: ' '
+}
+{
+  _id: ObjectId('685a3649c589d64628898916'),
+  name: 'A',
+  email: 'a@gmail.com',
+  age: 45,
+  phone: ' '
+}
+{
+  _id: ObjectId('685a35b3c589d6462889890f'),
+  name: 'dhanvanth',
+  age: '15',
+  dept: 'mech',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a3649c589d64628898914'),
+  name: 'dhanvanth',
+  age: '15',
+  dept: 'mech',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a26b2c589d64628898905'),
+  name: 'suhitha',
+  email: 'suhithamurugesh@gmail.com',
+  age: '19',
+  dept: 'EIE',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a2cdbc589d64628898906'),
+  name: 'veena',
+  email: 'veena@gmail.com',
+  age: '19',
+  dept: 'EIE',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a35b3c589d6462889890c'),
+  name: 'rithu',
+  email: 'rithu@gmail.com',
+  age: '19',
+  dept: 'EIE',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a3649c589d64628898911'),
+  name: 'rithu',
+  email: 'rithu@gmail.com',
+  age: '19',
+  dept: 'EIE',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a3649c589d6462889891a'),
+  name: 'E',
+  email: 'e@gmail.com',
+  age: '21',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a2f40c589d64628898909'),
+  name: 'abi',
+  email: 'abi@gamil.com',
+  age: '25',
+  dept: 'AIDS',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a2f40c589d6462889890a'),
+  name: 'rithish',
+  email: 'rithish24@gmail.com',
+  age: '25',
+  dept: 'CSE',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a35b3c589d6462889890d'),
+  name: 'abi',
+  email: 'abi@gamil.com',
+  age: '25',
+  dept: 'AIDS',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a35b3c589d6462889890e'),
+  name: 'rithish',
+  email: 'rithish24@gmail.com',
+  age: '25',
+  dept: 'CSE',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a35b3c589d64628898910'),
+  name: 'sanjai',
+  age: '25',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a3649c589d64628898912'),
+  name: 'abi',
+  email: 'abi@gamil.com',
+  age: '25',
+  dept: 'AIDS',
+  phone: ' '
+}
+{
+  _id: ObjectId('685a3649c589d64628898913'),
+  name: 'rithish',
+  email: 'rithish24@gmail.com',
+  age: '25',
+  dept: 'CSE',
+  phone: ' '
+}
